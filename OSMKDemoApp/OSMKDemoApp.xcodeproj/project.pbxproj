@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		5FF4E19B161ED52100EDC35B /* OSMKDemoAppOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMKDemoAppOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FF4E19D161ED52100EDC35B /* OSMKDemoApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OSMKDemoApp copy-Info.plist"; path = "/Users/rmurray/Documents/ios-sdk/ios-sdk-demo-mapkit-conversion/OSMKDemoApp/OSMKDemoApp copy-Info.plist"; sourceTree = "<absolute>"; };
+		5FF4E19D161ED52100EDC35B /* OSMKDemoAppOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = OSMKDemoAppOS.plist; path = "/Users/rmurray/Documents/ios-sdk/ios-sdk-demo-mapkit-conversion/OSMKDemoApp/OSMKDemoAppOS.plist"; sourceTree = "<absolute>"; };
 		5FF4E1A5161ED5B300EDC35B /* OSMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSMap.framework; path = ../StaticFrameworks/OSMap.framework; sourceTree = "<group>"; };
 		5FF4E1A7161ED5C700EDC35B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5FF4E1A9161ED5CC00EDC35B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -99,7 +99,6 @@
 				5FFB4F68161DDC9C00FAA45E /* OSMKDemoApp */,
 				5FFB4F61161DDC9C00FAA45E /* Frameworks */,
 				5FFB4F5F161DDC9C00FAA45E /* Products */,
-				5FF4E19D161ED52100EDC35B /* OSMKDemoApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +143,7 @@
 		5FFB4F69161DDC9C00FAA45E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5FF4E19D161ED52100EDC35B /* OSMKDemoAppOS.plist */,
 				5FFB4F6A161DDC9C00FAA45E /* OSMKDemoApp-Info.plist */,
 				5FFB4F6B161DDC9C00FAA45E /* InfoPlist.strings */,
 				5FFB4F6E161DDC9C00FAA45E /* main.m */,
@@ -300,7 +300,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
 				IBSC_OTHER_FLAGS = "";
-				INFOPLIST_FILE = "OSMKDemoApp copy-Info.plist";
+				INFOPLIST_FILE = OSMKDemoAppOS.plist;
 				PRODUCT_NAME = OSMKDemoAppOS;
 				WRAPPER_EXTENSION = app;
 			};
@@ -316,7 +316,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
 				IBSC_OTHER_FLAGS = "";
-				INFOPLIST_FILE = "OSMKDemoApp copy-Info.plist";
+				INFOPLIST_FILE = OSMKDemoAppOS.plist;
 				PRODUCT_NAME = OSMKDemoAppOS;
 				WRAPPER_EXTENSION = app;
 			};

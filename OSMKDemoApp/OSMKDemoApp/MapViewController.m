@@ -8,6 +8,10 @@
 
 #import "MapViewController.h"
 
+#define kOS_API_KEY @"YOUR_KEY_HERE"
+#define kOS_URL @"YOUR_URL_HERE"
+#define kIS_PRO FALSE
+
 @interface MapViewController () <MKMapViewDelegate>
 
 @end
@@ -21,11 +25,12 @@
     
 #ifndef USE_MAPKIT
     // Configure tileSources
-    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:@"Airsource" refererUrl:@"file://" openSpacePro:true];
+    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOS_API_KEY refererUrl:kOS_URL openSpacePro:kIS_PRO];
     self.mapView.tileSources = [NSArray arrayWithObjects:webSource, nil];
-    self.mapView.delegate = self;
     
 #endif
+    
+    self.mapView.delegate = self;
     
     [self setMapDefaultLocation];
 }
