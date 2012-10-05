@@ -19,7 +19,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    _mapView.delegate = self;
+#ifndef USE_MAPKIT
+    // Configure tileSources
+    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:@"Airsource" refererUrl:@"file://" openSpacePro:true];
+    self.mapView.tileSources = [NSArray arrayWithObjects:webSource, nil];
+    self.mapView.delegate = self;
+    
+#endif
     
     [self setMapDefaultLocation];
 }
@@ -40,7 +46,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
-    _mapView = nil;
+    self.mapView = nil;
 }
 
 @end

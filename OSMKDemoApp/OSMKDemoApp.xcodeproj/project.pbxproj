@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FF4E18A161ED52100EDC35B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB4F6E161DDC9C00FAA45E /* main.m */; };
+		5FF4E18B161ED52100EDC35B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB4F72161DDC9C00FAA45E /* AppDelegate.m */; };
+		5FF4E18C161ED52100EDC35B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB4F7E161DDC9C00FAA45E /* MapViewController.m */; };
+		5FF4E18F161ED52100EDC35B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFB4F62161DDC9C00FAA45E /* UIKit.framework */; };
+		5FF4E190161ED52100EDC35B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFB4F64161DDC9C00FAA45E /* Foundation.framework */; };
+		5FF4E191161ED52100EDC35B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFB4F66161DDC9C00FAA45E /* CoreGraphics.framework */; };
+		5FF4E193161ED52100EDC35B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB4F6B161DDC9C00FAA45E /* InfoPlist.strings */; };
+		5FF4E194161ED52100EDC35B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB4F74161DDC9C00FAA45E /* Default.png */; };
+		5FF4E195161ED52100EDC35B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB4F76161DDC9C00FAA45E /* Default@2x.png */; };
+		5FF4E196161ED52100EDC35B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB4F78161DDC9C00FAA45E /* Default-568h@2x.png */; };
+		5FF4E197161ED52100EDC35B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB4F7A161DDC9C00FAA45E /* MainStoryboard.storyboard */; };
+		5FF4E1A6161ED5B300EDC35B /* OSMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF4E1A5161ED5B300EDC35B /* OSMap.framework */; };
+		5FF4E1A8161ED5C700EDC35B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF4E1A7161ED5C700EDC35B /* libsqlite3.dylib */; };
+		5FF4E1AA161ED5CC00EDC35B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF4E1A9161ED5CC00EDC35B /* QuartzCore.framework */; };
+		5FF4E1AC161ED5DB00EDC35B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF4E1AB161ED5DB00EDC35B /* CoreLocation.framework */; };
+		5FF4E1AE161ED74800EDC35B /* StoryboardOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FF4E1AD161ED74800EDC35B /* StoryboardOS.storyboard */; };
 		5FFB4F63161DDC9C00FAA45E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFB4F62161DDC9C00FAA45E /* UIKit.framework */; };
 		5FFB4F65161DDC9C00FAA45E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFB4F64161DDC9C00FAA45E /* Foundation.framework */; };
 		5FFB4F67161DDC9C00FAA45E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFB4F66161DDC9C00FAA45E /* CoreGraphics.framework */; };
@@ -22,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FF4E19B161ED52100EDC35B /* OSMKDemoAppOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMKDemoAppOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FF4E19D161ED52100EDC35B /* OSMKDemoApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OSMKDemoApp copy-Info.plist"; path = "/Users/rmurray/Documents/ios-sdk/ios-sdk-demo-mapkit-conversion/OSMKDemoApp/OSMKDemoApp copy-Info.plist"; sourceTree = "<absolute>"; };
+		5FF4E1A5161ED5B300EDC35B /* OSMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSMap.framework; path = ../StaticFrameworks/OSMap.framework; sourceTree = "<group>"; };
+		5FF4E1A7161ED5C700EDC35B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		5FF4E1A9161ED5CC00EDC35B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5FF4E1AB161ED5DB00EDC35B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5FF4E1AD161ED74800EDC35B /* StoryboardOS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardOS.storyboard; sourceTree = "<group>"; };
 		5FFB4F5E161DDC9C00FAA45E /* OSMKDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMKDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFB4F62161DDC9C00FAA45E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5FFB4F64161DDC9C00FAA45E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,6 +65,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5FF4E18D161ED52100EDC35B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF4E1AC161ED5DB00EDC35B /* CoreLocation.framework in Frameworks */,
+				5FF4E1AA161ED5CC00EDC35B /* QuartzCore.framework in Frameworks */,
+				5FF4E1A8161ED5C700EDC35B /* libsqlite3.dylib in Frameworks */,
+				5FF4E18F161ED52100EDC35B /* UIKit.framework in Frameworks */,
+				5FF4E190161ED52100EDC35B /* Foundation.framework in Frameworks */,
+				5FF4E191161ED52100EDC35B /* CoreGraphics.framework in Frameworks */,
+				5FF4E1A6161ED5B300EDC35B /* OSMap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5FFB4F5B161DDC9C00FAA45E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,6 +99,7 @@
 				5FFB4F68161DDC9C00FAA45E /* OSMKDemoApp */,
 				5FFB4F61161DDC9C00FAA45E /* Frameworks */,
 				5FFB4F5F161DDC9C00FAA45E /* Products */,
+				5FF4E19D161ED52100EDC35B /* OSMKDemoApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				5FFB4F5E161DDC9C00FAA45E /* OSMKDemoApp.app */,
+				5FF4E19B161ED52100EDC35B /* OSMKDemoAppOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +115,10 @@
 		5FFB4F61161DDC9C00FAA45E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5FF4E1AB161ED5DB00EDC35B /* CoreLocation.framework */,
+				5FF4E1A9161ED5CC00EDC35B /* QuartzCore.framework */,
+				5FF4E1A7161ED5C700EDC35B /* libsqlite3.dylib */,
+				5FF4E1A5161ED5B300EDC35B /* OSMap.framework */,
 				5FFB4F85161DDCAA00FAA45E /* MapKit.framework */,
 				5FFB4F62161DDC9C00FAA45E /* UIKit.framework */,
 				5FFB4F64161DDC9C00FAA45E /* Foundation.framework */,
@@ -93,6 +136,7 @@
 				5FFB4F7D161DDC9C00FAA45E /* MapViewController.h */,
 				5FFB4F7E161DDC9C00FAA45E /* MapViewController.m */,
 				5FFB4F69161DDC9C00FAA45E /* Supporting Files */,
+				5FF4E1AD161ED74800EDC35B /* StoryboardOS.storyboard */,
 			);
 			path = OSMKDemoApp;
 			sourceTree = "<group>";
@@ -114,6 +158,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5FF4E188161ED52100EDC35B /* OSMKDemoAppOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FF4E198161ED52100EDC35B /* Build configuration list for PBXNativeTarget "OSMKDemoAppOS" */;
+			buildPhases = (
+				5FF4E189161ED52100EDC35B /* Sources */,
+				5FF4E18D161ED52100EDC35B /* Frameworks */,
+				5FF4E192161ED52100EDC35B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSMKDemoAppOS;
+			productName = OSMKDemoApp;
+			productReference = 5FF4E19B161ED52100EDC35B /* OSMKDemoAppOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5FFB4F5D161DDC9C00FAA45E /* OSMKDemoApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FFB4F82161DDC9C00FAA45E /* Build configuration list for PBXNativeTarget "OSMKDemoApp" */;
@@ -153,11 +214,25 @@
 			projectRoot = "";
 			targets = (
 				5FFB4F5D161DDC9C00FAA45E /* OSMKDemoApp */,
+				5FF4E188161ED52100EDC35B /* OSMKDemoAppOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5FF4E192161ED52100EDC35B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF4E193161ED52100EDC35B /* InfoPlist.strings in Resources */,
+				5FF4E194161ED52100EDC35B /* Default.png in Resources */,
+				5FF4E195161ED52100EDC35B /* Default@2x.png in Resources */,
+				5FF4E196161ED52100EDC35B /* Default-568h@2x.png in Resources */,
+				5FF4E197161ED52100EDC35B /* MainStoryboard.storyboard in Resources */,
+				5FF4E1AE161ED74800EDC35B /* StoryboardOS.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5FFB4F5C161DDC9C00FAA45E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +248,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5FF4E189161ED52100EDC35B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF4E18A161ED52100EDC35B /* main.m in Sources */,
+				5FF4E18B161ED52100EDC35B /* AppDelegate.m in Sources */,
+				5FF4E18C161ED52100EDC35B /* MapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5FFB4F5A161DDC9C00FAA45E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +290,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5FF4E199161ED52100EDC35B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../StaticFrameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
+				IBSC_OTHER_FLAGS = "";
+				INFOPLIST_FILE = "OSMKDemoApp copy-Info.plist";
+				PRODUCT_NAME = OSMKDemoAppOS;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5FF4E19A161ED52100EDC35B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../StaticFrameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
+				IBSC_OTHER_FLAGS = "";
+				INFOPLIST_FILE = "OSMKDemoApp copy-Info.plist";
+				PRODUCT_NAME = OSMKDemoAppOS;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		5FFB4F80161DDC9C00FAA45E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -259,6 +376,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					USE_MAPKIT,
+				);
 				INFOPLIST_FILE = "OSMKDemoApp/OSMKDemoApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -270,6 +392,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = USE_MAPKIT;
 				INFOPLIST_FILE = "OSMKDemoApp/OSMKDemoApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -279,6 +402,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5FF4E198161ED52100EDC35B /* Build configuration list for PBXNativeTarget "OSMKDemoAppOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FF4E199161ED52100EDC35B /* Debug */,
+				5FF4E19A161ED52100EDC35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5FFB4F58161DDC9C00FAA45E /* Build configuration list for PBXProject "OSMKDemoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -295,6 +427,7 @@
 				5FFB4F84161DDC9C00FAA45E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
