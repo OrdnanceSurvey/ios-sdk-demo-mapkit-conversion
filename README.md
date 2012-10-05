@@ -5,7 +5,7 @@ A demo app using the iOS Openspace SDK as a drop in replacement for Apple Mapkit
 
 This project contains an example of how convert an application currently using Apple Mapkit by renaming symbols with the preprocessor.
 
-See [Conversion steps](#conversion-steps) for details.
+See [Conversion steps](#conversion-steps) for details about converting and the two targets in this project.
 
 
 ![ScreenShot](screenshot-mk.png "Screenshot of mapkit-conversion app")
@@ -55,13 +55,13 @@ Note: if an OS OpenSpace Pro account then change kIS_PRO to TRUE
 Project can now be built and run.
 
 - Select the OSMKDemoApp for Apple Mapkit version
-- Select the OSMKDemoAppOS for the iOS Openspace SDK
+- Select the OSMKDemoAppOS for the iOS Openspace SDK version
 
 #### Conversion steps
 
-The initial project was a basic demo using Apple Mapkit and Storyboards. To convert this application
+The initial project was a basic demo using Apple Mapkit and Storyboards. To convert an existing Mapkit application:
 
-1. If using storyboard or nib then replace the existing MKMapView with a UIView of class name OSMapView and add -ObjC to linker flags. TODO: require -objc??
+1. If using storyboard or nib then replace the existing MKMapView with a UIView of class name OSMapView and add -ObjC to linker flags. TODO: require -objc only for nibs??
 2. Rename symbols
 
 <pre>
@@ -102,6 +102,14 @@ The initial project was a basic demo using Apple Mapkit and Storyboards. To conv
 
 
 All code using prefix MK will now be replaced, the only extra code required is that to configure your tile sources.
+
+This demo project has two targets, the OSMKDemoApp target has a preprocessor macro USE_MAPKIT which allows you to switch back to Mapkit as below:
+
+<pre>
+#ifdef USE_MAPKIT // or #ifndef USE_MAPKIT
+//do something
+#endif
+</pre>
 
 
 
