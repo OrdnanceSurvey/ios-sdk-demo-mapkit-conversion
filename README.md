@@ -8,8 +8,8 @@ This project contains an example of how convert an application currently using A
 See [Conversion steps](#conversion-steps) for details about converting and the two targets in this project.
 
 
-![ScreenShot](screenshot-mk.png "Screenshot of mapkit-conversion app")
-![ScreenShot](screenshot-os.png "Screenshot of mapkit-conversion OS app")
+![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion/raw/master/screenshot-mk.png "Screenshot of mapkit-conversion app")
+![ScreenShot](https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion/raw/master/screenshot-os.png "Screenshot of mapkit-conversion OS app")
 
 
 Getting started
