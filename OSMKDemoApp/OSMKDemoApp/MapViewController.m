@@ -8,9 +8,13 @@
 
 #import "MapViewController.h"
 
-#define kOS_API_KEY @"YOUR_KEY_HERE"
-#define kOS_URL @"YOUR_URL_HERE"
-#define kIS_PRO FALSE
+/*
+ * Define your OS Openspace API KEY details below
+ * @see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/index.html
+ */
+static NSString *const kOSApiKey = @"YOUR_KEY_HERE";
+static NSString *const kOSApiKeyUrl = @"YOUR_API_URL_HERE";
+static BOOL const kOSIsPro = YES;
 
 @interface MapViewController () <MKMapViewDelegate>
 
@@ -21,11 +25,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
 #ifndef USE_MAPKIT
-    // Configure tileSources
-    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOS_API_KEY refererUrl:kOS_URL openSpacePro:kIS_PRO];
+    // If this target is using OS SDK then configure tileSources
+    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey refererUrl:kOSApiKeyUrl openSpacePro:kOSIsPro];
     self.mapView.tileSources = [NSArray arrayWithObjects:webSource, nil];
     
 #endif
@@ -73,7 +76,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
-    self.mapView = nil;
 }
 
 
