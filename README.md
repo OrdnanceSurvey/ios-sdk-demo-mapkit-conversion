@@ -112,6 +112,11 @@ This demo project has two targets, the OSMKDemoApp target has a preprocessor mac
 </pre>
 
 
+Questions and Issues
+-------
+
+If you have any questions or issues with the ordnancesurey-ios-sdk or this demo app then please TODO: url to o-s.co.uk openspace forum
+
 
 License
 -------
