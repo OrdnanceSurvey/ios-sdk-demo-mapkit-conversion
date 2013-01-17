@@ -50,7 +50,7 @@ static BOOL const kOSIsPro = YES;
     MKPointAnnotation *annotation = [MKPointAnnotation new];
     [annotation setCoordinate:coord];
     
-    annotation.title = @"Here my coordinate";
+    annotation.title = @"Here is my coordinate:";
     annotation.subtitle = [NSString stringWithFormat:@"%0.4f,%0.4f",annotation.coordinate.latitude, annotation.coordinate.longitude];
     [self.mapView addAnnotation:annotation];
     
