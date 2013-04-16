@@ -13,7 +13,7 @@
  * @see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/index.html
  */
 static NSString *const kOSApiKey = @"YOUR_KEY_HERE";
-static NSString *const kOSApiKeyUrl = @"YOUR_API_URL_HERE";
+static NSString *const kOSAppleAppId = @"YOUR_APPLE_APP_ID";
 static BOOL const kOSIsPro = YES;
 
 @interface MapViewController () <MKMapViewDelegate>
@@ -27,8 +27,9 @@ static BOOL const kOSIsPro = YES;
     [super viewDidLoad];
     
 #ifndef USE_MAPKIT
+    
     // If this target is using OS SDK then configure tileSources
-    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey refererUrl:kOSApiKeyUrl openSpacePro:kOSIsPro];
+    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey appleId:kOSAppleAppId openSpacePro:kOSIsPro];
     self.mapView.tileSources = [NSArray arrayWithObjects:webSource, nil];
     
 #endif
@@ -37,7 +38,7 @@ static BOOL const kOSIsPro = YES;
     
     [self setMapDefaultLocation];//set region to gb
     
-    [self addAnnotationForCoord:(CLLocationCoordinate2D){52.205298,0.118146}];//add coord for point
+    [self addAnnotationForCoord:(CLLocationCoordinate2D){52.205298,0.118146}];
 
 }
 
