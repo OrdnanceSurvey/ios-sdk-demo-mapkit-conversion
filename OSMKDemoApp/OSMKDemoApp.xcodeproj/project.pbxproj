@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F46A546171DB42000D719DC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F46A545171DB42000D719DC /* SystemConfiguration.framework */; };
 		5FF4E18A161ED52100EDC35B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB4F6E161DDC9C00FAA45E /* main.m */; };
 		5FF4E18B161ED52100EDC35B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB4F72161DDC9C00FAA45E /* AppDelegate.m */; };
 		5FF4E18C161ED52100EDC35B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB4F7E161DDC9C00FAA45E /* MapViewController.m */; };
@@ -38,14 +39,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5FF4E19B161ED52100EDC35B /* OSMKDemoAppOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMKDemoAppOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F46A545171DB42000D719DC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5FF4E19B161ED52100EDC35B /* OSMKDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMKDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF4E19D161ED52100EDC35B /* OSMKDemoAppOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = OSMKDemoAppOS.plist; path = "/Users/rmurray/Documents/ios-sdk/ios-sdk-demo-mapkit-conversion/OSMKDemoApp/OSMKDemoAppOS.plist"; sourceTree = "<absolute>"; };
 		5FF4E1A5161ED5B300EDC35B /* OSMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSMap.framework; path = ../StaticFrameworks/OSMap.framework; sourceTree = "<group>"; };
 		5FF4E1A7161ED5C700EDC35B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5FF4E1A9161ED5CC00EDC35B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5FF4E1AB161ED5DB00EDC35B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5FF4E1AD161ED74800EDC35B /* StoryboardOS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardOS.storyboard; sourceTree = "<group>"; };
-		5FFB4F5E161DDC9C00FAA45E /* OSMKDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMKDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FFB4F5E161DDC9C00FAA45E /* OSMKDemoAppMK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMKDemoAppMK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FFB4F62161DDC9C00FAA45E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5FFB4F64161DDC9C00FAA45E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5FFB4F66161DDC9C00FAA45E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F46A546171DB42000D719DC /* SystemConfiguration.framework in Frameworks */,
 				5FF4E1AC161ED5DB00EDC35B /* CoreLocation.framework in Frameworks */,
 				5FF4E1AA161ED5CC00EDC35B /* QuartzCore.framework in Frameworks */,
 				5FF4E1A8161ED5C700EDC35B /* libsqlite3.dylib in Frameworks */,
@@ -105,8 +108,8 @@
 		5FFB4F5F161DDC9C00FAA45E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FFB4F5E161DDC9C00FAA45E /* OSMKDemoApp.app */,
-				5FF4E19B161ED52100EDC35B /* OSMKDemoAppOS.app */,
+				5FFB4F5E161DDC9C00FAA45E /* OSMKDemoAppMK.app */,
+				5FF4E19B161ED52100EDC35B /* OSMKDemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +117,7 @@
 		5FFB4F61161DDC9C00FAA45E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F46A545171DB42000D719DC /* SystemConfiguration.framework */,
 				5FF4E1AB161ED5DB00EDC35B /* CoreLocation.framework */,
 				5FF4E1A9161ED5CC00EDC35B /* QuartzCore.framework */,
 				5FF4E1A7161ED5C700EDC35B /* libsqlite3.dylib */,
@@ -172,7 +176,7 @@
 			);
 			name = OSMKDemoAppOS;
 			productName = OSMKDemoApp;
-			productReference = 5FF4E19B161ED52100EDC35B /* OSMKDemoAppOS.app */;
+			productReference = 5FF4E19B161ED52100EDC35B /* OSMKDemoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5FFB4F5D161DDC9C00FAA45E /* OSMKDemoApp */ = {
@@ -189,7 +193,7 @@
 			);
 			name = OSMKDemoApp;
 			productName = OSMKDemoApp;
-			productReference = 5FFB4F5E161DDC9C00FAA45E /* OSMKDemoApp.app */;
+			productReference = 5FFB4F5E161DDC9C00FAA45E /* OSMKDemoAppMK.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -301,7 +305,7 @@
 				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
 				IBSC_OTHER_FLAGS = "";
 				INFOPLIST_FILE = OSMKDemoAppOS.plist;
-				PRODUCT_NAME = OSMKDemoAppOS;
+				PRODUCT_NAME = OSMKDemoApp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -317,7 +321,7 @@
 				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
 				IBSC_OTHER_FLAGS = "";
 				INFOPLIST_FILE = OSMKDemoAppOS.plist;
-				PRODUCT_NAME = OSMKDemoAppOS;
+				PRODUCT_NAME = OSMKDemoApp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -382,7 +386,7 @@
 					USE_MAPKIT,
 				);
 				INFOPLIST_FILE = "OSMKDemoApp/OSMKDemoApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OSMKDemoAppMK;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -394,7 +398,7 @@
 				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = USE_MAPKIT;
 				INFOPLIST_FILE = "OSMKDemoApp/OSMKDemoApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OSMKDemoAppMK;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
