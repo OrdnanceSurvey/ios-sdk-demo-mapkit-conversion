@@ -31,7 +31,9 @@ If you do not own a re-use data licence you can register for an API key to acces
 
 If you own a data licence, for example, you are a member of the PSMA, you can register for an API key to access [OSOnDemand WMTS] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
 
-#### Clone project
+#### Download project
+
+Copy the project to your local machine, eg:
 
 <pre>
 git clone https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion.git
@@ -39,24 +41,24 @@ git clone https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion.git
 
 #### Download ordnancesurvey-ios-sdk
 
- - Download the latest ordnancesurvey-ios-sdk static framework TBC
- - Unzip into the project directory root
- <pre>
- $SRCROOT/StaticFrameworks
- </pre>
+- Download the latest ordnancesurvey-ios-sdk static framework TBC 
+- Unzip the SDK into the `StaticFrameworks` directory at the root of the project
+
+<pre>
+$SRCROOT/StaticFrameworks
+</pre>
  
 
-#### Update demo app with your API Key
+#### Update demo app with your API Key and Bundle Identifier details
 
-Copy and paste the API Key and associated URL into the demo app
+Copy and paste the API Key into the demo app
 
-Note: if an OS OpenSpace Pro account then change kIS_PRO to TRUE
+Update the Bundle Identifier associated with the API Key
 
 <pre>
 //In MapViewController.m
 
 static NSString *const kOSApiKey = @"YOUR_KEY_HERE";
-static NSString *const kOSApiKeyUrl = @"YOUR_API_URL_HERE";
 static BOOL const kOSIsPro = YES;
 
 </pre>
@@ -72,47 +74,50 @@ Project can now be built and run.
 
 The initial project was a basic demo using Apple Mapkit and Storyboards. To convert an existing Mapkit application:
 
-1. If using storyboard or nib then replace the existing MKMapView with a UIView of class name OSMapView and ??add -ObjC to linker flags. TODO: is require -objc only for nibs??
-2. Rename symbols, add the lines below in an appropriate class header file
+1. If using storyboard or nib then replace the existing MKMapView with a UIView of class name OSMapView
+2. Rename symbols, add the lines below in an appropriate file, the demo app does this in `MapViewController.h`
 
 <pre>
 #import "OSMap/OSMap.h"
 
-        #define MKAnnotation OSAnnotation
-        #define MKPointAnnotation OSPointAnnotation
-        #define MKUserLocation OSUserLocation
-        #define MKMapViewDelegate OSMapViewDelegate
-        #define MKMapView OSMapView
-        #define MKAnnotationView OSAnnotationView
-        #define MKPinAnnotationView OSPinAnnotationView
-        #define MKOverlay OSOverlay
-        #define MKOverlayView OSOverlayView
-        #define MKCircle OSCircle
-        #define MKCircleView OSCircleView
-        #define MKPolygon OSPolygon
-        #define MKPolygonView OSPolygonView
-        #define MKPolyline OSPolyline
-        #define MKPolylineView OSPolylineView
-        #define MKOverlayPathView OSOverlayPathView
-        #define MKPinAnnotationColor OSPinAnnotationColor
-        #define MKPinAnnotationColorRed OSPinAnnotationColorRed
-        #define MKPinAnnotationColorPurple OSPinAnnotationColorPurple
-        #define MKAnnotationViewDragState OSAnnotationViewDragState
-        #define MKCoordinateRegion OSCoordinateRegion
-        #define MKCoordinateSpan OSCoordinateSpan
-        #define MKUserTrackingMode OSUserTrackingMode
-        #define MKUserTrackingModeNone OSUserTrackingModeNone
-        #define MKUserTrackingModeFollow OSUserTrackingModeFollow
-        #define MKUserTrackingModeFollowWithHeading OSUserTrackingModeFollowWithHeading
+#define MKAnnotation OSAnnotation
+#define MKPointAnnotation OSPointAnnotation
+#define MKUserLocation OSUserLocation
+#define MKMapViewDelegate OSMapViewDelegate
+#define MKMapView OSMapView
+#define MKAnnotationView OSAnnotationView
+#define MKPinAnnotationView OSPinAnnotationView
+#define MKOverlay OSOverlay
+#define MKOverlayView OSOverlayView
+#define MKCircle OSCircle
+#define MKCircleView OSCircleView
+#define MKPolygon OSPolygon
+#define MKPolygonView OSPolygonView
+#define MKPolyline OSPolyline
+#define MKPolylineView OSPolylineView
+#define MKOverlayPathView OSOverlayPathView
+#define MKPinAnnotationColor OSPinAnnotationColor
+#define MKPinAnnotationColorRed OSPinAnnotationColorRed
+#define MKPinAnnotationColorPurple OSPinAnnotationColorPurple
+#define MKAnnotationViewDragState OSAnnotationViewDragState
+#define MKCoordinateRegion OSCoordinateRegion
+#define MKCoordinateSpan OSCoordinateSpan
+#define MKUserTrackingMode OSUserTrackingMode
+#define MKUserTrackingModeNone OSUserTrackingModeNone
+#define MKUserTrackingModeFollow OSUserTrackingModeFollow
+#define MKUserTrackingModeFollowWithHeading OSUserTrackingModeFollowWithHeading
 
-        #import "OSMap/OSMap+MapPointCompat.h"
+#import "OSMap/OSMap+MapPointCompat.h"
 
-        #define MKMapRect OSMapRect
-        #define MKMapPoint OSMapPoint
+#define MKMapRect OSMapRect
+#define MKMapPoint OSMapPoint
+
  </pre>
 
 
-All code using prefix MK will now be replaced, the only extra code required is that to configure your tile sources.
+All code using prefix MK will now be replaced, the only extra code required is that to configure your API key and tile sources.
+
+##### Demo project
 
 This demo project has two targets, the OSMKDemoApp target has a preprocessor macro USE_MAPKIT build setting which allows you to switch back to Mapkit as below:
 
