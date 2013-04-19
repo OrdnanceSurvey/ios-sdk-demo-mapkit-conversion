@@ -15,17 +15,24 @@ See [Conversion steps](#conversion-steps) for details about converting and the t
 Getting started
 ---
 
+### Register for an API Key
 
-#### Register for an API Key
+Developers who wish to use the online services will need to register for an API key in order to authenticate requests.
 
-Developers who wish to use the WMTS services will need to register an App Name in order to authenticate the API key in the following format:
+When registering for an API Key we need to know a couple of items:
 
-APPLE_ID.BUNDLE_ID e.g. 12345678.com.example.find-a-postbox 
+* Bundle Identifier of the application using the API key
 
-Apple App ID: This is a numerical value that is unique for each iOS app and has to be created in Apple's iOS Provisioning portal.
-Bundle Identifier: This is the reverse domain name specified in Xcode, this is generated from the app name (how you name your project) and the company identifier specified. 
+Let us know the Bundle Identifier of the Xcode project in which you will be using the API. This is available and configurable when creating an Xcode project or from project settings or `Info.plist`
 
-#### Registration Process
+
+* Apple App ID to be associated with this application
+
+This ID is the unique Apple ID generated in iTunes Connect when creating a new iOS application for the Apple AppStore
+
+
+
+### Registration Process
 
 If you do not own a re-use data licence you can register for an API key to access [OS OpenSpace Pro] (https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/index.html) under a 90 day trial or a commercial re-use licence. 
 
@@ -35,9 +42,9 @@ If you own a data licence, for example, you are a member of the PSMA, you can re
 
 Copy the project to your local machine, eg:
 
-<pre>
+```bash
 git clone https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion.git
-</pre>
+```
 
 #### Download ordnancesurvey-ios-sdk
 
@@ -55,13 +62,13 @@ Copy and paste the API Key into the demo app
 
 Update the Bundle Identifier associated with the API Key
 
-<pre>
+```objective-c
 //In MapViewController.m
 
 static NSString *const kOSApiKey = @"YOUR_KEY_HERE";
 static BOOL const kOSIsPro = YES;
 
-</pre>
+```
 
 #### Build and run
 
@@ -77,7 +84,7 @@ The initial project was a basic demo using Apple Mapkit and Storyboards. To conv
 1. If using storyboard or nib then replace the existing MKMapView with a UIView of class name OSMapView
 2. Rename symbols, add the lines below in an appropriate file, the demo app does this in `MapViewController.h`
 
-<pre>
+```objective-c
 #import "OSMap/OSMap.h"
 
 #define MKAnnotation OSAnnotation
@@ -112,7 +119,7 @@ The initial project was a basic demo using Apple Mapkit and Storyboards. To conv
 #define MKMapRect OSMapRect
 #define MKMapPoint OSMapPoint
 
- </pre>
+ ```
 
 
 All code using prefix MK will now be replaced, the only extra code required is that to configure your API key and tile sources.
@@ -121,11 +128,11 @@ All code using prefix MK will now be replaced, the only extra code required is t
 
 This demo project has two targets, the OSMKDemoApp target has a preprocessor macro USE_MAPKIT build setting which allows you to switch back to Mapkit as below:
 
-<pre>
+```objective-c
 #ifdef USE_MAPKIT // or to negate #ifndef USE_MAPKIT
 //do something
 #endif
-</pre>
+```
 
 
 Questions and Issues
