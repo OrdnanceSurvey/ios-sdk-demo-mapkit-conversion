@@ -16,9 +16,9 @@ Getting started
 ---
 
 
-#### Register for an API Key
+#### Registration and Access
 
-[See Getting Started](https://github.com/OrdnanceSurvey/openspace-ios-sdk)
+[See Obtaining an API key](https://github.com/OrdnanceSurvey/openspace-ios-sdk)
 
 #### Clone project
 
