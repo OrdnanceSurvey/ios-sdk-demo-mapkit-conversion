@@ -18,18 +18,7 @@ Getting started
 
 #### Register for an API Key
 
-Developers who wish to use the WMTS services will need to register an App Name in order to authenticate the API key in the following format:
-
-APPLE_ID.BUNDLE_ID e.g. 12345678.com.example.find-a-postbox 
-
-Apple App ID: This is a numerical value that is unique for each iOS app and has to be created in Apple's iOS Provisioning portal.
-Bundle Identifier: This is the reverse domain name specified in Xcode, this is generated from the app name (how you name your project) and the company identifier specified. 
-
-#### Registration Process
-
-If you do not own a re-use data licence you can register for an API key to access [OS OpenSpace Pro] (https://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/pro/index.html) under a 90 day trial or a commercial re-use licence. 
-
-If you own a data licence, for example, you are a member of the PSMA, you can register for an API key to access [OSOnDemand WMTS] (http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-ondemand/pricing.html).
+[See Getting Started](https://github.com/OrdnanceSurvey/openspace-ios-sdk)
 
 #### Clone project
 
