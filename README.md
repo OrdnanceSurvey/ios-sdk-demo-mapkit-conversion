@@ -48,7 +48,7 @@ git clone https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion.git
 
 Copy and paste the API Key and associated URL into the demo app
 
-Note: if an OS OpenSpace Pro or OS OnDemand account then change kIS_PRO to TRUE
+Change kIS_PRO to TRUE
 
 <pre>
 //In MapViewController.m
