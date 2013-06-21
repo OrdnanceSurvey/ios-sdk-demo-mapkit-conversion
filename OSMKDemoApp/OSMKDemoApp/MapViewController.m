@@ -12,8 +12,7 @@
  * Define your OS Openspace API KEY details below
  * @see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/index.html
  */
-static NSString *const kOSApiKey = @"YOUR_KEY_HERE";
-static NSString *const kOSAppleAppId = @"YOUR_APPLE_APP_ID";
+static NSString *const kOSApiKey = @"API_KEY";
 static BOOL const kOSIsPro = YES;
 
 @interface MapViewController () <MKMapViewDelegate>
@@ -29,7 +28,7 @@ static BOOL const kOSIsPro = YES;
 #ifndef USE_MAPKIT
     
     // If this target is using OS SDK then configure tileSources
-    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey appleId:kOSAppleAppId openSpacePro:kOSIsPro];
+    id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey openSpacePro:kOSIsPro];
     self.mapView.tileSources = [NSArray arrayWithObjects:webSource, nil];
     
 #endif
