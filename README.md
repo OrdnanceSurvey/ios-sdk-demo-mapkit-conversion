@@ -40,7 +40,7 @@ git clone https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion.git
 #### Download openspace-ios-sdk
 
  - Download the latest [openspace-ios-sdk static framework](https://github.com/OrdnanceSurvey/openspace-ios-sdk#contents)
- - Unzip into the project directory root
+ - Unzip into the StaticFrameworks directory under the project root
  <pre>
  $SRCROOT/StaticFrameworks
  </pre>
