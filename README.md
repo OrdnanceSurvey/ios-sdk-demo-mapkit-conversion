@@ -50,7 +50,9 @@ git clone https://github.com/OrdnanceSurvey/ios-sdk-demo-mapkit-conversion.git
 
 Copy and paste the API Key into the demo app
 
-Change kIS_PRO to TRUE
+Update Bundle Identifier
+
+Change kIS_PRO appropriately
 
 ```objective-c
 //In MapViewController.m
