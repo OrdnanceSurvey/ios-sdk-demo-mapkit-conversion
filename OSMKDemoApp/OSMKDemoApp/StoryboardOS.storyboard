@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G56" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ohJ-dl-FQE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B3116" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ohJ-dl-FQE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="1EE-ti-Z6X">
             <objects>
                 <viewController id="ohJ-dl-FQE" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8xJ-Da-ApA"/>
+                        <viewControllerLayoutGuide type="bottom" id="tFE-gQ-JRF"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fax-in-SoM">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szf-Bd-idi" customClass="OSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Szf-Bd-idi" firstAttribute="bottom" secondItem="fax-in-SoM" secondAttribute="bottom" type="default" id="hOe-yz-WPN"/>
-                            <constraint firstItem="Szf-Bd-idi" firstAttribute="top" secondItem="fax-in-SoM" secondAttribute="top" type="default" id="laO-lb-fh8"/>
-                            <constraint firstItem="Szf-Bd-idi" firstAttribute="leading" secondItem="fax-in-SoM" secondAttribute="leading" type="default" id="pQk-fs-eNT"/>
-                            <constraint firstItem="Szf-Bd-idi" firstAttribute="trailing" secondItem="fax-in-SoM" secondAttribute="trailing" type="default" id="x7u-cO-TUx"/>
+                            <constraint firstItem="Szf-Bd-idi" firstAttribute="bottom" secondItem="fax-in-SoM" secondAttribute="bottom" id="hOe-yz-WPN"/>
+                            <constraint firstItem="Szf-Bd-idi" firstAttribute="top" secondItem="fax-in-SoM" secondAttribute="top" id="laO-lb-fh8"/>
+                            <constraint firstItem="Szf-Bd-idi" firstAttribute="leading" secondItem="fax-in-SoM" secondAttribute="leading" id="pQk-fs-eNT"/>
+                            <constraint firstItem="Szf-Bd-idi" firstAttribute="trailing" secondItem="fax-in-SoM" secondAttribute="trailing" id="x7u-cO-TUx"/>
                         </constraints>
                     </view>
                     <connections>
