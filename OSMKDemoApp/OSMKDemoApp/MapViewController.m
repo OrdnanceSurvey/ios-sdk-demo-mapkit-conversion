@@ -12,17 +12,18 @@
  * Define your OS Openspace API KEY details below
  * @see http://www.ordnancesurvey.co.uk/oswebsite/web-services/os-openspace/index.html
  */
-static NSString *const kOSApiKey = @"API_KEY";
-static BOOL const kOSIsPro = YES;
+static NSString *const kOSApiKey = @"E2BE1E5D60293BF3E0430B6CA40ACE3B";
+static BOOL const kOSIsPro = NO;
 
 @interface MapViewController () <MKMapViewDelegate>
 
 @end
 
+
 @implementation MapViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
     
 #ifndef USE_MAPKIT
@@ -31,21 +32,23 @@ static BOOL const kOSIsPro = YES;
     id<OSTileSource> webSource = [OSMapView webTileSourceWithAPIKey:kOSApiKey openSpacePro:kOSIsPro];
     self.mapView.tileSources = [NSArray arrayWithObjects:webSource, nil];
     
+    NSLog(@"Using SDK Version: %@",[OSMapView SDKVersion]);
+    
 #endif
     
-    self.mapView.delegate = self;
+    [_mapView setDelegate: self];
     
-    [self setMapDefaultLocation];//set region to gb
+    [self setMapDefaultLocation];//set mapView region to a default position
     
-    [self addAnnotationForCoord:(CLLocationCoordinate2D){52.205298,0.118146}];
+    [self addAnnotationForCoord: (CLLocationCoordinate2D){52.205298,0.118146}];// add a pin at a known location
 
 }
 
+
 /*
- * Simple method to add annotation for a CLLocationCoordinate2D
+ * Simple method to add annotation for a point with text
  */
-- (void)addAnnotationForCoord:(CLLocationCoordinate2D)coord
-{
+- (void)addAnnotationForCoord:(CLLocationCoordinate2D)coord {
     
     MKPointAnnotation *annotation = [MKPointAnnotation new];
     [annotation setCoordinate:coord];
@@ -59,20 +62,21 @@ static BOOL const kOSIsPro = YES;
 /*
  * Set default location
  */
-- (void)setMapDefaultLocation
-{
+- (void)setMapDefaultLocation {
+    
     // go to the GB
     MKCoordinateRegion newRegion;
     newRegion.center.latitude = 54;
     newRegion.center.longitude = -1.5;
     newRegion.span.latitudeDelta = 8;
     newRegion.span.longitudeDelta = 7;
+    
     [self.mapView setRegion:newRegion animated:NO];
     
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
@@ -81,8 +85,8 @@ static BOOL const kOSIsPro = YES;
 
 #pragma mark Map View Delegate methods
 
--(MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-{
+-(MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    
     // Use the default user location view.
     if ([annotation isKindOfClass:[MKUserLocation class]])
     {
