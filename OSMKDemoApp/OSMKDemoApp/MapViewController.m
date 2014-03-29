@@ -54,7 +54,15 @@ static BOOL const kOSIsPro = NO;
     [annotation setCoordinate:coord];
     
     annotation.title = @"Here is my coordinate:";
-    annotation.subtitle = [NSString stringWithFormat:@"%0.4f,%0.4f",annotation.coordinate.latitude, annotation.coordinate.longitude];
+    
+#ifdef USE_MAPKIT
+    NSString *subtitle = [NSString stringWithFormat:@"%0.4f,%0.4f", coord.latitude, coord.longitude];
+#else
+    OSGridPoint p = OSGridPointForCoordinate(coord);
+    NSString *subtitle = [NSString stringWithFormat: @"e:%.f, n:%.f ", p.easting, p.northing];
+#endif
+
+    annotation.subtitle = subtitle;
     [self.mapView addAnnotation:annotation];
     
 }
@@ -82,7 +90,7 @@ static BOOL const kOSIsPro = NO;
     
 }
 
-
+#pragma mark -
 #pragma mark Map View Delegate methods
 
 -(MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {

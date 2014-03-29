@@ -202,7 +202,7 @@
 		5FFB4F55161DDC9C00FAA45E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = OrdnanceSurvey;
 			};
 			buildConfigurationList = 5FFB4F58161DDC9C00FAA45E /* Build configuration list for PBXProject "OSMKDemoApp" */;
@@ -306,6 +306,7 @@
 				IBSC_OTHER_FLAGS = "";
 				INFOPLIST_FILE = OSMKDemoAppOS.plist;
 				PRODUCT_NAME = OSMKDemoApp;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -322,6 +323,7 @@
 				IBSC_OTHER_FLAGS = "";
 				INFOPLIST_FILE = OSMKDemoAppOS.plist;
 				PRODUCT_NAME = OSMKDemoApp;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -348,7 +350,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -368,7 +371,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -386,7 +389,9 @@
 					USE_MAPKIT,
 				);
 				INFOPLIST_FILE = "OSMKDemoApp/OSMKDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = OSMKDemoAppMK;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -398,7 +403,9 @@
 				GCC_PREFIX_HEADER = "OSMKDemoApp/OSMKDemoApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = USE_MAPKIT;
 				INFOPLIST_FILE = "OSMKDemoApp/OSMKDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = OSMKDemoAppMK;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
